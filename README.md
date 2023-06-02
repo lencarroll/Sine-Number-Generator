@@ -4,7 +4,7 @@ This project continues from other random generator projects I have explored befo
 
 In this project we generate a number baed on how long it takes you to press the 'Enter' key. The time taken (which should be less than 10 seconds) is then used in the equation:
 
-$$sin(\frac{1000t\pi){10})$$
+$$sin(\frac{1000t\pi}{10})$$
 
 The reason I used this equation instead of something much simpler (such as $n = \frac{t}{0}$), is because the latter equation would make it very easy to bias the number generation (if you want a value less than 0.2, just press the keyboard before 2 seconds) but with this equation, it is quite difficult to bias it. For example:
 If the time take was 2.111111 seconds, the number generated would be about 0.34, but using 2.112111 it would give you a value of 0.62. So being off by merely 10 milliseconds can cause such a massive change. 
