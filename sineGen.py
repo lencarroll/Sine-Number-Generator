@@ -24,10 +24,10 @@ def random(verbose=None):
         random_number = (duration+noise)/10
     elif noise_sign == 1:
         random_number = np.abs((duration - noise)/10)
-    if duration/time < 0.00001:
+    if duration/10 < 0.00001:
         print("There is an issue with your key press, please try again!")
         return random(verbose)
-    elif duration/time >= 1 or random_number >= 1:
+    elif duration/10 >= 1 or random_number >= 1:
         print("You took too long, you will need to try again!")
         return random(verbose)
     else:
